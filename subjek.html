@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div ng-controller="subjek">
+        <h3>Subjek</h1>
+        <div class="search-container">
+            <form class="search" action="" method="">
+                <input type="text" name="search" placeholder="Masukkan kod subjek.." ng-model="searchInput">
+                <a href="#!subjek/subjekdetails" ng-click="passSearchValue(searchInput)">Search</a>
+            </form>
+        </div>
+        <br>
+        <div class="sesisem">
+            <label for="sesi">Sesi & Semester: </label>
+            <select name="sesi" id="sesi"  ng-change="chooseSesi()" ng-model="sesisem">
+                <option value="1">2022/2023 - 1</option>
+                <option value="2">2021/2022 - 1</option>
+                <option value="3">2021/2022 - 2</option>
+                <option value="4">2020/2021 - 1</option>
+                <option value="5">2020/2021 - 2</option>
+                <option value="6">2019/2020 - 1</option>
+                <option value="7">2019/2020 - 2</option>
+                <option value="8">2018/2019 - 1</option>
+                <option value="9">2018/2019 - 2</option>
+            </select>
+        </div>       
+
+        <div class="table-content">
+            <table class="jadual">
+                <tr>
+                    <th>Bil.</th>
+                    <th>Kod Subjek</th>
+                    <th>Nama Subjek</th>
+                </tr>
+                <tr ng-repeat="item in data">
+                    <td id="text-center">{{$index+1}}</td>
+                    <td id="text-center">{{item.kod_subjek}}</td>
+                    <td><a href="#!subjek/subjekdetails" ng-click="codeClicked(item.kod_subjek)">{{item.nama_subjek}}</a></td>
+                </tr> 
+            </table>
+        </div> 
+    </div>
+</body>
+</html>

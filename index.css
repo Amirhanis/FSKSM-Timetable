@@ -1,0 +1,142 @@
+.search-container{
+    height: 40px;
+    text-align: center;
+}
+
+form.search input[type=text]{
+    float: left;
+    font-family: 'Poppins';
+    padding: 10px;
+    background: #f1f1f1;
+    width: 60%;
+    height: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border: 1px solid #d9d8d8;
+}
+
+form.search a{
+    float: left;
+    padding: 10px;
+    color: white;
+    border: 1px solid #d9d8d8;
+    border-left: none;
+    width: 80px;
+    height: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(80,1,1,255);
+    color: white;
+    border: 0px;
+}
+
+form.search a:link{
+    text-decoration: none;
+}
+
+.sesisem{
+    text-align: right;
+}
+
+.course{
+    text-align: right;
+}
+
+.table-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jadual{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    height: auto;
+}
+
+.jadual, .jadual td, .jadual th{
+    border-collapse: collapse;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.bw{
+    inline-size: 15px;
+    word-break: break-all;
+}
+
+#text-center, .jadual th{
+    text-align: center;
+}
+
+.jadual th{
+    background-color: #d9d8d8;
+}
+
+.jadual a{
+    text-decoration: underline;
+}
+
+.flex-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#box-title{
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.details-container{
+    width: auto; 
+    height: auto;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    padding: 0px;
+}
+
+.details-inside-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 67px;
+    background-color: rgba(80,1,1,255);
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.nama-details-inside-container{
+    width: auto;
+    height: auto;
+    background-color: rgba(80,1,1,255);
+    color: white;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.previous-button{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(80,1,1,255);
+    border-radius: 50%;
+    color: white;
+    font-size: 2em;
+    width: 29px;
+    height: 29px;
+    margin-right: 2px;
+}
+
+.previous-button a{
+    text-decoration: none;   
+    color: white;
+}
+
+.error-message{
+    color: red;
+    font-style: italic;
+}

@@ -1,0 +1,64 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div ng-controller="pelajar">
+        <h3>Pelajar</h1>
+        <div ng-if="sessionUser">
+           
+
+              
+            <div class="course">
+            <label for="course">Cari Melalui Kursus: </label>
+            <select name="course" id="course"  ng-change="chooseCourse(course1)" ng-model="course1">
+                <option value="All" selected >All courses</option>
+                <option value="SECBH"  >SECBH</option>
+                <option value="SECJH"  >SECJH</option>
+                <option value="SECPH"  >SECPH</option>
+                <option value="SECRH"  >SECRH</option>
+                <option value="SECVH"  >SECVH</option>
+                <option value="SCSB"  >SCSB</option>
+                <option value="SCSJ"  >SCSJ</option>
+                <option value="SECJ"  >SECJ</option>
+                <option value="SCSR"  >SCSR</option>
+                <option value="SCSV"  >SCSV</option>
+                <option value="SECB"  >SECB</option>
+                <option value="SECP"  >SECP</option>                
+                <option value="SECR"  >SECR</option>                                 
+                <option value="SECV"  >SECV</option>                  
+            </select>
+        </div> 
+            <div class="table-content">
+                <table class="jadual">
+                    <tr>
+                        <th>Bil.</th>
+                        <th>Nama Pelajar</th>
+                        <th>Tahun/Kursus</th>
+                        <th>Bil. Subjek</th>
+                    </tr>
+                    <tr ng-repeat="item in pelajar">
+                        <td id="text-center">{{$index+1}}</td>
+                        <td>
+                            <a href="#!pelajar/pelajardetails" ng-click="codeClicked(item.no_matrik)">
+                                {{item.nama}}
+                            </a>
+                        </td>
+
+                        <td id="text-center">
+                            {{item.tahun_kursus}}{{item.kod_kursus}}
+                        </td>
+
+                        <td id="text-center">
+                            {{item.bil_subjek}}
+                        </td>
+                    </tr> 
+                </table>
+            </div> 
+        </div>
+        <div ng-hide="sessionUser">
+            <a href="#"><h4 class="error-message">You must be logged in to view this page!</h4></a>
+        </div>
+    </div>
+</body>
+</html>

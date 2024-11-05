@@ -1,0 +1,90 @@
+<html>
+<head>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div ng-controller="home" >
+    <div></div>
+    <div class ="login-container" ng-hide="sessionUser">
+        <div class="login-title">
+            <h1>FSKSM</h1>
+            <h4>Timetable and Space Management System</h4>
+        </div>
+        <div class="login-box">
+            <br>
+            <h3><label class="header"><b>Username</b></label></h3>
+            <input ng-model="login" type="text" placeholder="Username..">
+            <br>
+            <h3><label class="header"><b>Password</b></label></h3>
+            <input ng-model="password" type="password" placeholder="Password..">
+            <br>
+            <button ng-click="authUser()">Login</button>
+            <br>
+        </div>
+    </div>
+    <div ng-show="sessionUser">
+        <div class="user-info">
+            <div class="description">
+                <h4 class="nama">{{sessionUser.full_name}}</h4>
+                <h4 class="kerja">{{sessionUser.description}}</h4>
+            </div>
+            <div class="logout">
+                <button class="logout-button" ng-click="logout()">Log Out</button>
+            </div>
+        </div>
+        <div class="services">
+            <div class="page service1">
+                <div class="title">
+                    <h4>Curriculum</h4>
+                </div>
+                <div class="gambar1">
+                    <img src="./images/curriculum.png">
+                </div>
+                <br>
+                <div class="caption1">
+                    <p>Click to view list of curriculum</p>
+                    <a href="#!kurikulum"><b>See More--></b></p></a>
+                </div>
+            </div>
+            <div class="page service2">
+                <div class="title">
+                    <h4>Timetable</h4>
+                </div>
+                <div class="gambar2">
+                    <img src="./images/timetable.jpg">
+                </div>
+                <br>
+                <div class="caption2">
+                    <p>Click to view list of timetable</p>
+                    <a href="#!jadual"><b>See More--></b></p></a>
+                </div>
+            </div>
+            <div class="page service3">
+                <div class="title">
+                    <h4>Subject</h4>
+                </div>
+                <div class="gambar3">
+                    <img src="./images/subjek">
+                </div>
+                <br>
+                <div class="caption3">
+                    <p>Click to view list of subject</p>
+                    <a href="#!subjek"><b>See More--></b></p></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="button-bawah">
+            <div class="box1">
+                <div><img src="./images/student.jfif" class="box1-img"></div>
+                <div><a href="#!pelajar" class="student">Students</a></div>
+            </div>
+            <div class="box2">
+                <div><img src="./images/lecturer.jfif" alt="" class="box2-img"></div>
+                <div><a href="#!pensyarah" class="change">Lecturers</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.login-title{
+    text-align: center;
+    margin: 50px;
+}
+
+.login-title h1{
+    color: rgba(80,1,1,255);
+}
+
+.login-title h4{
+    color: black;
+}
+
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-container h1{
+    font-size: 3em;
+}
+
+.login-box{
+    background-color: rgba(238,224,199,255);
+    width: 80%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.login-box input{
+    width: 100px;
+    float: left;
+    font-family: 'Poppins';
+    padding: 10px;
+    background: #f1f1f1;
+    width: 60%;
+    height: 40px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border: 1px solid #d9d8d8;
+    border-radius: 10px;
+}
+
+.login-box button{
+    padding: 10px;
+    color: white;
+    border: 1px solid #d9d8d8;
+    border-left: none;
+    width: 60%;
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    background-color: rgba(80,1,1,255);
+    color: white;
+    border: 0px;
+}
+
+.user-info{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    background: url('./images/gateUTM.jpg') no-repeat center;
+    background-size: cover;
+    height: 100%;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+.nama{
+    font-size: 1.5em;
+    text-decoration: solid;
+    text-shadow: 1px 2px 2px black;
+}
+
+.kerja{
+    font-size: 1.2em;
+    text-decoration: solid;
+    text-shadow: 1px 2px 2px black;
+}
+
+.logout-button{
+    background-color: #500101;
+    padding: 10px;
+    color: white;
+    border: 0px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
+}
+
+.services{
+    margin: auto;
+    display: flex;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+.service1, .service2, .service3, .page{
+    min-width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 50px 2px;
+    padding: 20px;
+    width: 220px;
+    height: 420px;
+    border: solid;
+    overflow: hidden;
+}
+
+.service1{
+    background-color: antiquewhite;
+}
+
+.service2{
+    background-color: #eea545;
+}
+
+.service3{
+    background-color: #eddd9e;
+}
+
+.title{
+    text-transform: capitalize;
+    color: maroon;
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.gambar1{
+    text-align: center;
+}
+
+.gambar2{
+    text-align: center;
+}
+
+.gambar3{
+    text-align: center;
+}
+
+.gambar1 img{
+    height: 70%;
+    width: 90%;
+}
+
+.gambar2 img{
+    height: 70%;
+    width: 90%;
+}
+
+.gambar3 img{
+    height: 70%;
+    width: 90%;
+}
+
+.caption1{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.caption2{
+    text-align: center;
+    margin-top: 130px;
+}
+
+.caption3{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.button-bawah{
+    background-color: maroon;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.box1-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.box2-img{
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.box1, .box2{
+    text-align: center;
+}
+
+.box1{
+    padding-right: 70px;
+}
+
+.button-bawah a{
+    color:goldenrod;
+    font-size: 15px;
+    transition: .2s linear;
+} 

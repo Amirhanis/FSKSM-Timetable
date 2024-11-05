@@ -1,0 +1,34 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div ng-controller="pensyarah">
+        <h3>Pensyarah</h1>
+        <div ng-if="sessionUser">
+            <div class="search-container">
+                <form class="search" action="" method="">
+                    <input type="text" name="search" placeholder="Masukkan no pekerja.." ng-model="searchInput1">
+                    <a href="#!pensyarah/pensyarahdetails" ng-click="passSearchValue(searchInput1)">Search</a>
+                </form>
+            </div>
+            <br>    
+            <div class="table-content">
+                <table class="jadual">
+                    <tr>
+                        <th>Bil.</th>
+                        <th>Nama Pensyarah</th>
+                    </tr>
+                    <tr ng-repeat="item in data">
+                        <td id="text-center">{{$index+1}}</td>
+                        <td><a href="#!pensyarah/pensyarahdetails" ng-click="codeClicked(item.no_pekerja)">{{item.nama}}</a></td>
+                    </tr> 
+                </table>
+            </div> 
+        </div>
+        <div ng-hide="sessionUser">
+            <a href="#"><h4 class="error-message">You must be logged in to view this page!</h4></a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div ng-controller="pensyarahdetails">
+            <div class="subdetails-header">
+                <div class="previous-button"><a href="#!pensyarah">&#8249;</a></div>
+                <h3>Butiran Pensyarah</h3>
+            </div>
+            <div ng-if="sessionUser">
+                <div class="details-container">
+                    <div id="box-title">Nama Pensyarah</div>
+                    <div class="nama-details-inside-container">
+                        <p>{{filteredArray1[0].nama}}</p>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="details-container">
+                        <div id="box-title">Jumlah Subjek</div>
+                        <div class="details-inside-container">
+                            <p>{{filteredArray1[0].bil_subjek}}</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div id="box-title">Jumlah Seksyen</div>
+                        <div class="details-inside-container">
+                            <p>{{filteredArray1[0].bil_seksyen}}</p>
+                        </div>
+                    </div>
+                    <div class="details-container">
+                        <div id="box-title">Jumlah Pelajar</div>
+                        <div class="details-inside-container">
+                            <p>{{filteredArray1[0].bil_pelajar}}</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="table-content">
+                    <div id="box-title">Pensyarah Subjek</div>
+                    <table class="jadual">
+                        <tr>
+                            <th>Bil.</th>
+                            <th>Kod Subjek</th>
+                            <th>Nama Subjek</th>
+                            <th>Seksyen</th>
+                            <!-- <th>Kod Fakulti</th> -->
+                            <th>Bil. Pelajar</th>
+                        </tr>
+                        <tr ng-repeat="item in filteredArray2">
+                            <td id="text-center">{{$index+1}}</td>
+                            <td>{{item.kod_subjek}}</td>
+                            <td>{{item.nama_subjek}}</td>
+                            <td id="text-center">{{item.seksyen}}</td>
+                            <!-- <td></td> -->
+                            <td id="text-center">{{item.bil_pelajar}}</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+            <div ng-hide="sessionUser">
+                <h4 class="error-message">You must be logged in to view this page!</h4>
+            </div>
+        </div>
+    </body>
+</html>

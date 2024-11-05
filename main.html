@@ -1,0 +1,59 @@
+<!--
+Group Name: 
+    AD2223J-Bravo (SECJ3104-1)
+
+Group Members:
+    AHMAD NAZRAN
+    MUHAMMAD HAFIZZUL
+    AMIR HANIS
+    MUHAMMAD SYAZWAN
+    DAFA RAYHAN
+    SHABRINA SALSABILA 
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FSKSM Timetable</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <body ng-app="FSKSMtimetable">
+        <nav id="mySidepanel" class="sidepanel">
+            <div class="sidepanel-box"></div>
+            </div>
+            <a class="sidepanel-item" href="#">Laman Utama</a>
+            <a class="sidepanel-item" href="#!kurikulum">Kurikulum</a>
+            <a class="sidepanel-item" href="#!subjek">Subjek</a>
+            <a class="sidepanel-item" href="#!pensyarah">Pensyarah</a>
+            <a class="sidepanel-item" href="#!pelajar">Pelajar</a>
+            <a class="sidepanel-item" href="#!ruang">Ruang</a>
+            <a class="sidepanel-item" href="#!jadualwaktu">Jadual Waktu</a>
+        </nav>
+        
+        <header class="app-header">
+            <div><button id="openbtn" class="openbtn">&#9776;</button></div>
+            <div><a href="#"><img src="images/utmlogo.png"></a></div>
+            <div class="spacer"></div>
+        </header>
+        
+        <div class="content-container" ng-view>
+            Currently in main.html
+        </div>
+
+    </body>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="./main.js"></script>
+<script src="./home.js"></script>
+<script src="./subjek.js"></script>
+<script src="./subjekdetails.js"></script>
+<script src="./pensyarah.js"></script>
+<script src="./pensyarahdetails.js"></script>
+<script src="./pelajar.js"></script>
+<script src="./pelajardetails.js"></script>
